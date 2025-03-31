@@ -9,7 +9,6 @@ function draw() {
     stroke(random(255), random(255), random(255));
     let x = random(0, width);
     let y = random(0, height);
-   // line(width / 2, height / 2, x, y);
     line(width/2 , y, x, sin(y));
   }
 }
