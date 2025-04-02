@@ -1,8 +1,10 @@
 function setup() {
-  canvasSize =  900;
+
   maxCenterOffset = 100;
-  createCanvas(canvasSize, canvasSize);
   amount=23
+
+  canvasSize =  min(windowWidth, windowHeight);
+  createCanvas(canvasSize, canvasSize);
   for (let i=0; i<amount; i++) {
     if (i > (amount / 2)) {
       maxCenterOffset = 0;
