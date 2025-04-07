@@ -1,9 +1,9 @@
 function setup() {
   createCanvas(400, 400);
   background(200);
-  stroke('black');
+  stroke("black");
   strokeWeight(5);
-  
+
   noFill();
   circle(200, 200, 200);
 
