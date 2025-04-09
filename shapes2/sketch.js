@@ -13,7 +13,7 @@ function setup() {
   const angle = radians(360 / amountOfFormPoints);
   for (let i = 0; i < amountOfFormPoints; i++) {
     x.push(cos(angle * i) * initRadius);
-    y.push(cos(angle * i) * initRadius);
+    y.push(sin(angle * i) * initRadius);
   }
 
   stroke(0, 75);
@@ -27,15 +27,22 @@ function draw() {
   for (let i = 0; i < amountOfFormPoints; i++) {
     x[i] += random(-stepSize, stepSize);
     y[i] += random(-stepSize, stepSize);
-    ellipse(x[i] + centerX, y[i], centerY, 5, 5);
+    ellipse(x[i] + centerX, y[i] + centerY, 5, 5);
   }
 
   beginShape();
 
   curveVertex(x[0] + centerX, y[0] + centerY);
+
   for (let i = 0; i < amountOfFormPoints; i++) {
     curveVertex(x[i] + centerX, y[i] + centerY);
   }
 
-  curveVertex(x);
+  curveVertex(x[0] + centerX, y[0] + centerY);
+
+  curveVertex(
+    x[amountOfFormPoints - 1] + centerX,
+    y[amountOfFormPoints - 1] + centerY
+  );
+  endShape();
 }
