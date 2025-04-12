@@ -4,8 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Creative Coding</title>
+ <style>
+        /* Invisible link */
+        .invisible-link {
+            display: none; /* Hides the link */
+        }
+:root {
+    --background-color: #FFFFFF; /* Light mode background */
+    --text-color: #000000; /* Light mode text color */
+}
+
+body, a {
+    font-family: segoe ui, Roboto, Oxygen-Sans, Ubuntu, Cantarell, helvetica neue, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1 {
+    color: var(--text-color);
+}
+
+.invisible-link {
+    display: none;
+}
+
+/* Dark mode specific styles */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #121212; /* Dark background */
+        --text-color: #FFFFFF; /* Light text color */
+    }
+}
+
+    </style>
   </head>
   <body>
+    <a href="http://nicolaswalisch.ch:8903/index.html" class="invisible-link">Do not click here</a>
     <a href="circle">circle</a><br />
     <a href="shapes">shapes</a><br />
     <a href="variables">variables</a><br />
