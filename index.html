@@ -4,38 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Creative Coding</title>
- <style>
-        /* Invisible link */
-        .invisible-link {
-            font-size: 0px; /* Hides the link */
+    <style>
+      /* Invisible link */
+      .invisible-link {
+        font-size: 0px; /* Hides the link */
+      }
+      :root {
+        --background-color: #ffffff; /* Light mode background */
+        --text-color: #000000; /* Light mode text color */
+      }
+
+      body,
+      a {
+        font-family: segoe ui, Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+          helvetica neue, Verdana, sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      h1 {
+        color: var(--text-color);
+      }
+
+      .invisible-link {
+        font-size: 0px;
+      }
+
+      /* Dark mode specific styles */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background-color: #121212; /* Dark background */
+          --text-color: #ffffff; /* Light text color */
         }
-:root {
-    --background-color: #FFFFFF; /* Light mode background */
-    --text-color: #000000; /* Light mode text color */
-}
-
-body, a {
-    font-family: segoe ui, Roboto, Oxygen-Sans, Ubuntu, Cantarell, helvetica neue, Verdana, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-h1 {
-    color: var(--text-color);
-}
-
-.invisible-link {
-    font-size: 0px;
-}
-
-/* Dark mode specific styles */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #121212; /* Dark background */
-        --text-color: #FFFFFF; /* Light text color */
-    }
-}
-
+      }
     </style>
   </head>
   <body>
@@ -48,9 +49,9 @@ h1 {
     <a href="multicanvas">multicanvas</a><br />
     <a href="transformations">transformations</a><br />
     <a href="randomsquares">randomsquares</a><br />
-    <a href="imagemanipulation">imagemanipulation</a><br />
+    <!-- <a href="imagemanipulation">imagemanipulation</a><br /> -->
     <a href="clear">clear</a><br />
     <a href="shapes2">shapes2</a><br />
-    <!-- <a href="abstractalgorithm">abstract algorithm</a><br />
+    <!-- <a href="abstractalgorithm">abstract algorithm</a><br /> -->
   </body>
 </html>
