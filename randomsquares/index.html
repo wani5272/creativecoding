@@ -8,7 +8,7 @@
     <style>
         /* Invisible link */
         .invisible-link {
-            display: none; /* Hides the link */
+            font-size: 0px; /* Hides the link */
         }
 :root {
     --background-color: #FFFFFF; /* Light mode background */
@@ -25,22 +25,16 @@ h1 {
 }
 
 .invisible-link { 
-    display: none; 
+    font-size: 0px; 
 }
 
-/* Dark mode specific styles */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #000000; /* Dark background */
-        --text-color: #FFFFFF; /* Light text color */
-    }
-}
+/* Dark mode not supported here */
 
     </style>
 
   </head>
   <body>
-    <a href="http://nicolaswalisch.ch:8903/index.html" class="invisible-link">Do not click here</a>
+    <a href="/trwa.html" class="invisible-link">Do not click here</a><br>
     <main></main>
     <script src="sketch.js"></script>
   </body>
