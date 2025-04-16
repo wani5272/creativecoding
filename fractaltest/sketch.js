@@ -12,6 +12,6 @@ function draw() {
         indexwithoffset = index + indexoffset;
         axiom.splice(indexwithoffset, 1, ...modifierF);
     }
-    console.log(axiom.toString);
+    console.log(axiom.toString());
   });
 }
