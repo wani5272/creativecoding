@@ -1,6 +1,2 @@
 markovchain/shakespeare.txt
 node_modules
-.mkindex.sh
-.tail.template
-.head.template
-.donotcountlist
