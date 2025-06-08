@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="../js/p5.js"></script>
+    <script src="../js/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+    <style>
+      /* Invisible link */
+      .invisible-link {
+        font-size: 0px; /* Hides the link */
+      }
+      :root {
+        --background-color: #ffffff; /* Light mode background */
+        --text-color: #000000; /* Light mode text color */
+      }
+
+      body,
+      a {
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      h1 {
+        color: var(--text-color);
+      }
+
+      .invisible-link {
+        font-size: 0px;
+      }
+
+      /* Dark mode specific styles */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background-color: #000000; /* Dark background */
+          --text-color: #ffffff; /* Light text color */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main></main>
+    <script src="sketch.js"></script>
+  </body>
+</html>

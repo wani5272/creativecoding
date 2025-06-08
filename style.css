@@ -1,0 +1,115 @@
+:root {
+    --background-color: #f6f3ff;
+    --text-color: #2d1e4a;
+    --link-color: rgb(120, 48, 252);
+    --border-color: #e0d7fa;
+    --card-bg: #fff;
+    --shadow: 0 4px 24px rgba(124, 58, 237, 0.07);
+    --accent: #fbbf24;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1a1333;
+        --text-color: #f3e8ff;
+        --link-color: #1f57f1;
+        --border-color: rgb(46, 123, 129);
+        --card-bg: #23223a;
+        --shadow: 0 4px 24px rgba(251, 191, 36, 0.09);
+        --accent: rgb(28, 89, 170);
+    }
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: monospace, system-ui, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.bg-anim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 20% 30%, #fbbf24 0, transparent 60%),
+        radial-gradient(circle at 80% 70%, #3aed58 0, transparent 60%);
+    animation: movebg 8s linear infinite alternate;
+}
+
+@keyframes movebg {
+    0% {
+        background-position: 20% 30%, 80% 70%;
+    }
+
+    100% {
+        background-position: 30% 40%, 70% 60%;
+    }
+}
+
+h1 {
+    font-size: 2.7rem;
+    margin: 2.5rem 0 1.2rem 0;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--link-color);
+    text-shadow: 2px 2px 0 var(--accent), 0 2px 8px #0001;
+    z-index: 1;
+    position: relative;
+    font-family: system-ui, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    margin: 2.5rem auto;
+    background: var(--card-bg);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    border: 2px solid var(--border-color);
+    z-index: 1;
+    position: relative;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 1.18rem;
+    padding: 0.7rem 1.1rem;
+    border-radius: 8px;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    background: linear-gradient(90deg, #fbbf24 0, #fff0 100%);
+    border: none;
+    display: inline-block;
+    font-family: monospace, system-ui, sans-serif;
+    box-shadow: 0 2px 8px #7c3aed11;
+}
+
+a:hover {
+    background: linear-gradient(90deg, #7c3aed22 0, #fbbf2411 100%);
+    color: var(--accent);
+    box-shadow: 0 4px 16px #7c3aed22;
+}
